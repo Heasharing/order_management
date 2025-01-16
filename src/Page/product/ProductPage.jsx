@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import ModalPopUp from '../Model/ModalPopUp'
+import { Modal } from "antd";
+import ModalPage from "../Model/ModelPage";
 
 function ProductPage() {
   const [isCartOpen, setIsCartOpen] = useState(true); // Cart is initially open
@@ -56,8 +58,11 @@ function ProductPage() {
             <img
               alt={product.imageAlt}
               src={product.imageSrc}
+              
               className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75"
+
             />
+        
             <div className="mt-4">
               <h3 className="text-sm text-gray-700">
                 <a href={product.href}>
@@ -83,12 +88,16 @@ function ProductPage() {
                   className="px-2 py-1 bg-gray-200 rounded-r-md"
                   onClick={() => handleIncrement(product.id)}
                 >
+                  
                   +
+
                 </button>
               </div>
+              
             </div>
           </div>
         ))}
+         <ModalPage/>
       </div>
       <div>
         {cartItems.map((product) => (
@@ -127,6 +136,7 @@ function ProductPage() {
                   +
                 </button>
               </div>
+              <Modal/>
             </div>
           </div>
         ))}

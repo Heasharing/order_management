@@ -14,6 +14,10 @@ import SettingPage from './component/setting/SettingPage';
 import ModelPage from './Page/Model/ModelPage';
 import RegistersPage from './component/setting/RegisterPage';
 import ModalPopUp from './Page/Model/ModalPopUp';
+import PrintPage from './Page/PrintView/PrintPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MenuPage from './Page/MenuPage/MenuPage';
+
 
 function App() {
   return (
@@ -28,6 +32,15 @@ function App() {
       <Route path="/models"  element={<ModalPopUp/>} />
       <Route path="/setting"  element={<SettingPage/>} />
       <Route path ="/regis" element={<RegistersPage />} />
+      <Route path ="/print" element={<PrintPage/>} />
+      <Route path ="/menu" element={<MenuPage/>} />
+     
+      {/* <Route path="/profiles" element={ProfilePage} /> */}
+
+
+      
+
+
      
 
       

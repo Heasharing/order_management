@@ -50,15 +50,21 @@ const items = [
   getItem('Setting', '/setting', <DesktopOutlined />),
   getItem('regis', '/regis', <DesktopOutlined />),
   getItem('model', '/models', <DesktopOutlined />),
+  getItem('print', '/print', <DesktopOutlined />),
+  getItem('Menu', '/menu', <DesktopOutlined />),
+  getItem('Profile', '/profile', <DesktopOutlined />),
+
+
+
 
  // getItem('Help', '/help', <FileOutlined />),
 ];
 const MainLayout = () => {
     const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
-  const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken();
+  // const {
+  //   token: { colorBgContainer, borderRadiusLG },
+  // } = theme.useToken();
   return (
     <Layout
       style={{
@@ -100,6 +106,7 @@ const MainLayout = () => {
                     <img src={profile} alt='' className='layout-profile flex-initial w-64'/>
                    
                     </Space>
+
                   </div>
                  
                 </div>

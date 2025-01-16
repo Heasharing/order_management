@@ -34,7 +34,6 @@ const ModalPage = () => {
   return (
     <div>
       <Button type="primary" onClick={showModal} icon={<PlusOutlined />}>
-        Add File
       </Button>
       <Modal
         title=""
