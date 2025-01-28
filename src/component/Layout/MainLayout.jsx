@@ -14,7 +14,7 @@ import {
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import { Breadcrumb, Layout, Menu, Space, theme,Input } from 'antd';
+import {  Layout, Menu, Space, Input } from 'antd';
 import { Outlet, useNavigate } from 'react-router';
 import { List } from 'antd/es/form/Form';
 const { Header, Content, Footer, Sider } = Layout;
@@ -29,9 +29,20 @@ function getItem(label, key, icon, children) {
   };
 }
 const items = [
-  getItem('Dashaboard', '/', <MdAssignment />),
-  getItem('Customer', '/customer', <FaUser />),
+  getItem('Dashaboard', '', <MdAssignment />),
+  getItem('Overview', '/home', <UserOutlined />),
+  getItem('Menu', '', <FaUser />,[
+    getItem('Menu list', '/menu', <UserOutlined/>),
+    getItem('Category', '/category', <UserOutlined/>),
+  ]),
+  getItem('Menu', '', <FaUser />,[
+    getItem('Menu list', '/menu', <UserOutlined/>),
+    getItem('Category', '/category', <UserOutlined/>),
+  ]),
   getItem('Product ', '/product', <MdProductionQuantityLimits />),
+  getItem('TableList ', '/table', <MdProductionQuantityLimits />),
+  getItem('OrderHistory', '/orderhistory', <MdProductionQuantityLimits />),
+
   getItem('About', '/about', <FcAbout />),
   getItem("Role", "role", <UserOutlined/>),
   getItem('password', 'sub1', <UserOutlined />, [
@@ -39,9 +50,6 @@ const items = [
       getItem("User", "sub2", <UserOutlined/>),
       getItem("User", "sub3", <UserOutlined/>),
     ]),
-     
-    
-  
   ]),
   getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
   getItem('Login', 'login', <UserOutlined/>),
@@ -50,9 +58,23 @@ const items = [
   getItem('Setting', '/setting', <DesktopOutlined />),
   getItem('regis', '/regis', <DesktopOutlined />),
   getItem('model', '/models', <DesktopOutlined />),
-  getItem('print', '/print', <DesktopOutlined />),
-  getItem('Menu', '/menu', <DesktopOutlined />),
+  // getItem('InvoiceTable ', '/invoice', <DesktopOutlined />),
+
+
+  // getItem('Menu', '/menu', <DesktopOutlined />),
   getItem('Profile', '/profile', <DesktopOutlined />),
+  getItem('Footer', '/footer', <DesktopOutlined />),
+  // getItem('Card', '/shoppingcart', <DesktopOutlined />),
+  getItem('table', '/table', <DesktopOutlined />),
+  getItem('Order', '/order', <DesktopOutlined />),
+
+  
+
+
+
+
+
+
 
 
 

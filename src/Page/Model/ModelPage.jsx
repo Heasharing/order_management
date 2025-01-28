@@ -33,7 +33,8 @@ const ModalPage = () => {
 
   return (
     <div>
-      <Button type="primary" onClick={showModal} icon={<PlusOutlined />}>
+      <Button type="primary" onClick={showModal} className="ml-10">
+        Add Item
       </Button>
       <Modal
         title=""

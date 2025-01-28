@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { menuItems } from "../mockData/products";
 import ItemModal from "../product/detail_screen"; // Import the modal component
-import ShoppingCart from "../product/Card"; // Import the ShoppingCart component
+import ShoppingCart from "./card"; // Import the ShoppingCart component
 
 function Overview_page() {
   const [menu] = useState(menuItems || []);

@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve('//src/component/ui/Card.jsx', './src'),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+  
+})

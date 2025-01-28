@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import ModalPopUp from '../Model/ModalPopUp'
-import { Modal } from "antd";
+import { Modal, Space } from "antd";
 import ModalPage from "../Model/ModelPage";
 
 function ProductPage() {
@@ -51,6 +51,21 @@ function ProductPage() {
 
   return (
     <div className="bg-white border-[5px] inset-0 overflow-hidden">
+      
+
+      <div className="float-right">
+        <div className="flex items-center justify-between">
+          <button
+           >
+            <ModalPage/>
+          </button>
+     
+
+  
+      </div>
+
+      </div>
+        
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 px-4 py-6 sm:px-6 sm:py-9 lg:max-w-7xl mx-auto">
         <div>
         {cartItems.map((product) => (
@@ -97,7 +112,7 @@ function ProductPage() {
             </div>
           </div>
         ))}
-         <ModalPage/>
+       
       </div>
       <div>
         {cartItems.map((product) => (
