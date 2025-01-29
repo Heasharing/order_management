@@ -28,19 +28,19 @@ function getItem(label, key, icon, children) {
 }
 const items = [
   getItem("Dashaboard", "/", <MdAssignment />),
-  getItem("Overview", "", <UserOutlined />),
+  getItem("Overview", "overview", <UserOutlined />),
   getItem("Menu", "", <FaUser />, [
     getItem("Menu list", "/menu", <UserOutlined />),
     getItem("Category", "/category", <UserOutlined />),
   ]),
- 
+
   getItem("Product ", "/product", <MdProductionQuantityLimits />),
   getItem("TableList ", "/table", <MdProductionQuantityLimits />),
   getItem("Order", "/order", <DesktopOutlined />),
-  
+
   getItem("OrderHistory", "/orderhistory", <MdProductionQuantityLimits />),
   getItem("About", "/about", <FcAbout />),
- 
+
   getItem("password", "sub1", <UserOutlined />, [
     getItem("User", "sub1", <UserOutlined />, [
       getItem("User", "sub2", <UserOutlined />),
@@ -51,11 +51,10 @@ const items = [
     getItem("Team 1", "6"),
     getItem("Team 2", "8"),
   ]),
-  getItem("Login", "login", <UserOutlined />),
- 
+
   getItem("Report", "/report", <PieChartOutlined />),
   getItem("Setting", "/setting", <DesktopOutlined />),
- 
+
   getItem("model", "/models", <DesktopOutlined />),
   // getItem('InvoiceTable ', '/invoice', <DesktopOutlined />),
 
@@ -63,7 +62,6 @@ const items = [
   getItem("Profile", "/profile", <DesktopOutlined />),
   getItem("Footer", "/footer", <DesktopOutlined />),
   // getItem('Card', '/shoppingcart', <DesktopOutlined />),
-  
 
   // getItem('Help', '/help', <FileOutlined />),
 ];
@@ -104,10 +102,7 @@ const MainLayout = () => {
 
         <div className="LayoutHeader flex justify-between">
           <Space className="flex-initial w-64">
-            
-            <div className="p-6">
-              
-            </div>
+            <div className="p-6"></div>
             <Input.Search placehoder="search" />
           </Space>
 
